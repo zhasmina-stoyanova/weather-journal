@@ -13,14 +13,19 @@ submitBtn.addEventListener('click', onSubmit);
 function onSubmit() {
     const zip = document.getElementById('zip').value;
     const countryCode = document.getElementById('country-code').value;
+    const feelings = document.getElementById('feelings').value;
     const url = baseUrl + zip + ',' + countryCode + '&appid=' + apiKey;
+
+    //get the data from the weather api
     getWebAPIData(url)
         .then(allData => {
+            //construct the specific data for the POST request
             const specificData = {
                 date: getCurrentDate(),
                 temp: allData.main.temp,
-                content: allData.main.feels_like
+                content: feelings
             };
+            //post the data to the server
             postData('/addData', specificData)
                 .then(returnedEntry => {
                     //update the dom of the elements
