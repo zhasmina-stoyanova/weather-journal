@@ -1,9 +1,9 @@
 /* Global Variables */
 
+// Personal API Key for OpenWeatherMap API with imperial units
+const apiKey = 'bf4d6b2a07b515f13fe54a3044d59a6e&units=imperial';
 // url for the open weather map api: 
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?zip='
-    //Personal API Key for OpenWeatherMap API
-const apiKey = 'bf4d6b2a07b515f13fe54a3044d59a6e';
 
 // Event listener to add function to existing HTML DOM element
 const submitBtn = document.getElementById('generate');
