@@ -13,21 +13,32 @@
             Weather Journal App
         </div>
         <div class="holder zip">
-            <label for="zip">Enter Zipcode here</label>
-            <input id="zip" type="text" placeholder="enter zip code here">
+            <label for="zip">Zipcode:</label>
+            <input id="zip" type="text" placeholder="enter zip code">
+        </div>
+        <div class="holder country-code">
+            <label for="country-code">Country Code:</label>
+            <input id="country-code" type="text" placeholder="enter country code">
         </div>
         <div class="holder feel">
             <label for="feelings">How are you feeling today?</label>
-            <textarea id="feelings" class="myInput" placeholder="Enter your feelings here" rows="9" rows="50"></textarea>
-            <button id="generate" type="submit">Generate</button>
+            <textarea id="feelings" class="myInput" placeholder="enter your feelings" rows="9" rows="50"></textarea>
+            <div id="generate">Generate</div>
         </div>
         <div class="holder entry">
-            <div class="title">Most Recent Entry</div>
+            <div class="title">Most Recent Entry:</div>
             <div id="entryHolder">
                 <div id="date"></div>
                 <div id="temp"></div>
                 <div id="content"></div>
             </div>
+        </div>
+        <div class="holder results">
+            <div class="title">Number of successful requests:
+                <span id="resultsHolder">0
+                </span>
+            </div>
+
         </div>
     </div>
     <script src="app.js" type="text/javascript"></script>
